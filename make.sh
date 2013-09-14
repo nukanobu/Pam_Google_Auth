@@ -9,7 +9,7 @@ ret=`rpm -aq |grep openssl-devel`
 if [ "${ret}" == "" ];then
     yum install openssh-devel
 fi
-ret=`rpm -qa |grep gcc`
+ret=`rpm -qa |egrep ^gcc-[0-9]`
 if [ "${ret}" == "" ];then
 	yum install gcc
 fi
@@ -19,7 +19,7 @@ if [ "${ret}" == "" ];then
 fi
 ret=`rpm -qa |grep libgcrypt`
 if [ "${ret}" == "" ];then
-	yum install libcrypt
+	yum install libgcrypt
 fi
 
 #google_auth.c compile 

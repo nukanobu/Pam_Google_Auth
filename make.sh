@@ -7,7 +7,7 @@ if [ "${ret}" == "" ];then
 fi
 ret=`rpm -aq |grep openssl-devel`
 if [ "${ret}" == "" ];then
-    yum install openssh-devel
+    yum install openssl-devel
 fi
 ret=`rpm -qa |egrep ^gcc-[0-9]`
 if [ "${ret}" == "" ];then

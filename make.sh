@@ -33,9 +33,10 @@ gcc -fPIC -shared -o pam_google_auth.so pam_google_auth.c -lpam -lgoogleauth -L/
 cp -i pam_google_auth.so /lib64/security/
 
 echo ""
-echo ""
-echo "Change /etc/pam.d/sshd!"
+echo "##########################################"
+echo "Change /etc/pam.d/sshd! "
 echo "Sample. Add to a next line in sshd file."
 echo ""
 echo "auth       requisite    pam_google_auth.so"
 echo ""
+echo "##########################################"

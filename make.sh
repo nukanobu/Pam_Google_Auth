@@ -11,7 +11,7 @@ if [ "${ret}" == "" ];then
 fi
 ret=`rpm -qa |grep gcc`
 if [ "${ret}" == "" ];then
-	yum install opengcc
+	yum install gcc
 fi
 ret=`rpm -qa |grep pam-devel`
 if [ "${ret}" == "" ];then
